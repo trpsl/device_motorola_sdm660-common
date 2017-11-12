@@ -186,6 +186,7 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh \
     ueventd.qcom.rc \
     move_time_data.sh \
+    init.safailnet.rc \
     wlan_carrier_bin.sh
 
 # IPACM
