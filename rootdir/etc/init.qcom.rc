@@ -87,6 +87,9 @@ on init
     chown system log /sys/fs/pstore/dmesg-ramoops-0
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
 
+    # Disable sched autogroup
+    write /proc/sys/kernel/sched_autogroup_enabled 0
+
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on fs
