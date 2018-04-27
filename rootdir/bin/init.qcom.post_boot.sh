@@ -2523,8 +2523,8 @@ case "$target" in
             echo 20 > /proc/sys/kernel/sched_small_wakee_task_load
 
             # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            #echo 0-3 > /dev/cpuset/background/cpus
+            #echo 0-3 > /dev/cpuset/system-background/cpus
 
             # disable thermal bcl hotplug to switch governor
             echo 0 > /sys/module/msm_thermal/core_control/enabled
@@ -2532,37 +2532,17 @@ case "$target" in
             # online CPU0
             echo 1 > /sys/devices/system/cpu/cpu0/online
             # configure governor settings for little cluster
-            echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif
-            echo "19000 1401600:39000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
-            echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-            echo 1401600 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
-            echo "85 1747200:95" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
-            echo 39000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
+            echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
+            echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
             echo 633600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/fast_ramp_down
             # online CPU4
             echo 1 > /sys/devices/system/cpu/cpu4/online
             # configure governor settings for big cluster
-            echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
-            echo "19000 1401600:39000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-            echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-            echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-            echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
-            echo "85 1401600:90 2150400:95" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
-            echo 39000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-            echo 59000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+            echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+            echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
+            echo 500 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
             echo 1113600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down
 
             # bring all cores online
             echo 1 > /sys/devices/system/cpu/cpu0/online
@@ -2694,36 +2674,17 @@ case "$target" in
             # online CPU0
             echo 1 > /sys/devices/system/cpu/cpu0/online
             # configure governor settings for Big cluster(CPU0 to CPU3)
-            echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif
-            echo "19000 1344000:39000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
-            echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-            echo 1344000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
-            echo "85 1344000:80" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
-            echo 39000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
+            echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
+            echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
             echo 787200 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif
-
             # online CPU4
             echo 1 > /sys/devices/system/cpu/cpu4/online
             # configure governor settings for Little cluster(CPU4 to CPU7)
-            echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
-            echo "19000 1094400:39000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-            echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-            echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-            echo 1094400 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
-            echo "85 1094400:80" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
-            echo 39000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+            echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
+            echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
             echo 614400 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif
 
             # bring all cores online
             echo 1 > /sys/devices/system/cpu/cpu0/online
