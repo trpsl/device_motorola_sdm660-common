@@ -869,10 +869,9 @@ service vendor.ftmd /vendor/bin/ftmdaemon
     oneshot
 
 service vendor.sensors /vendor/bin/sscrpcd sensorspd
-    class core
+    class early_hal
     user system
     group system
-    disabled
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
