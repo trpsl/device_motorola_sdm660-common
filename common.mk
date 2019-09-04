@@ -358,7 +358,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqsapshim
 
-# Soong
+# Soong 
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
