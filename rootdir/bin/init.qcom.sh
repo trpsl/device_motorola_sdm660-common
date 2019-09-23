@@ -84,7 +84,7 @@ start_msm_irqbalance_8939()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
 		case "$platformid" in
-		    "239" | "293" | "294" | "295" | "304" | "338" | "313" |"353")
+		    "239" | "293" | "294" | "295" | "304" | "313" | "353" | "354")
 			start vendor.msm_irqbalance;;
 		    "349" | "350" )
 			start vendor.msm_irqbal_lb;;
@@ -99,22 +99,29 @@ start_msm_irqbalance_msmnile()
          fi
 }
 
-start_msm_irqbalance660()
+start_msm_irqbalance_kona()
 {
-	if [ -f /vendor/bin/msm_irqbalance ]; then
-		case "$platformid" in
-		    "317" | "324" | "325" | "326" | "345" | "346")
-			start vendor.msm_irqbalance;;
-		    "318" | "327" | "385")
-			start vendor.msm_irqbl_sdm630;;
-		esac
-	fi
+         if [ -f /vendor/bin/msm_irqbalance ]; then
+                start vendor.msm_irqbalance
+         fi
+}
+
+start_msm_irqbalance_lito()
+{
+         if [ -f /vendor/bin/msm_irqbalance ]; then
+                start vendor.msm_irqbalance
+         fi
 }
 
 start_msm_irqbalance()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
-		start vendor.msm_irqbalance
+		case "$platformid" in
+		    "317" | "321" | "324" | "325" | "326" | "336" | "345" | "346" | "360" | "393")
+			start vendor.msm_irqbalance;;
+		    "318" | "327" | "385")
+			start vendor.msm_irqbl_sdm630;;
+		esac
 	fi
 }
 
@@ -224,7 +231,7 @@ case "$target" in
         else
              hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
-        start_msm_irqbalance660
+        start_msm_irqbalance
         ;;
     "apq8084")
         platformvalue=`cat /sys/devices/soc0/hw_platform`
@@ -306,6 +313,12 @@ case "$target" in
         ;;
     "msmnile")
         start_msm_irqbalance_msmnile
+        ;;
+    "kona")
+        start_msm_irqbalance_kona
+        ;;
+    "lito")
+        start_msm_irqbalance_lito
         ;;
     "msm8937")
         start_msm_irqbalance_8939
