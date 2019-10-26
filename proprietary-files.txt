@@ -341,6 +341,19 @@ vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a540_gpmu.fw2
 
+# Listen - from LA.UM.8.2.r1-04300-sdm660.0
+vendor/lib/hw/sound_trigger.primary.default.so:vendor/lib/hw/sound_trigger.primary.sdm660.so|44a9016f876260dd9d317000dc567bb836a16d02
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/vendor.qti.voiceprint@1.0.so
+vendor/lib64/libgcs-calwrapper.so
+vendor/lib64/libgcs-ipc.so
+vendor/lib64/libgcs-osal.so
+vendor/lib64/libgcs.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
+
 # Media
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
