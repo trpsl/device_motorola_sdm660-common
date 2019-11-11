@@ -278,7 +278,9 @@ PRODUCT_COPY_FILES += \
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:system/etc/permissions/privapp-permissions-wfd.xml \
-    $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti-product.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti-system.xml:system/etc/permissions/privapp-permissions-qti-system.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-qti-product.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti-product.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # OMX
