@@ -95,6 +95,9 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
+# Charger Images
+PRODUCT_PACKAGES += charger_res_images
+
 # Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \

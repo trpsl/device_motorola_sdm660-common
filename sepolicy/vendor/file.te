@@ -9,9 +9,6 @@ type fingerprint_socket, data_file_type, file_type, core_data_file_type;
 type sysfs_sensor, sysfs_type, fs_type;
 type sysfs_wifi, sysfs_type, fs_type;
 
-# charge_only_mode
-type chargeonly_data_file, file_type, data_file_type;
-
 # Input devices
 type idc_file, file_type, vendor_file_type;
 type keylayout_file, file_type, vendor_file_type;

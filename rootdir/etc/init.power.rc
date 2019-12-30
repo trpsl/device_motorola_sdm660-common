@@ -69,7 +69,6 @@ on moto-charger
     trigger firmware_mounts_complete
     setprop sys.usb.config charging
     start vendor.gbmodinstall
-    start vendor.charge_only_mode
     start vendor.thermal-com
 
     # online cpu 0 and set governor powersave
@@ -84,8 +83,3 @@ on moto-charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
-
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
-    user root
-    group graphics system input
-    disabled
