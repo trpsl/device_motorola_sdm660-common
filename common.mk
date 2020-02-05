@@ -196,7 +196,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qti.qseecomd.sh \
     ueventd.qcom.rc \
-    move_time_data.sh \
     wlan_carrier_bin.sh
 
 # IPACM
