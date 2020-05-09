@@ -21,3 +21,13 @@ genfscon sysfs /devices/soc/soc:mmi_pl_chg_manager/power_supply/mmi_pl_chg_manag
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:qcom,pm660_rtc/rtc          u:object_r:sysfs_rtc:s0
 
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d800/leds u:object_r:sysfs_leds:s0
+
+#Pixel Power HAL
+
+genfscon debugfs /rpm_stats     u:object_r:debugfs_rpm:s0
+genfscon debugfs /system_stats  u:object_r:debugfs_rpm:s0
+
+genfscon sysfs /devices/virtual/graphics/fb0                                  u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/virtual/graphics/fb1                                  u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/virtual/graphics/fb2                                  u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/virtual/graphics/fb3                                  u:object_r:sysfs_graphics:s0
