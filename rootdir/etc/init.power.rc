@@ -51,6 +51,10 @@ on property:sys.boot_completed=1
     # Set IO scheduler to BFQ
     setprop sys.io.scheduler bfq
 
+on property:vendor.post_boot.parsed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on charger
     trigger early-fs
     trigger fs
