@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2016 The CyanogenMod Project
+               (C) 2017-2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Fingerprint gestures -->
+    <string name="fingerprint_gestures_title">Fingerprint gestures</string>
+    <string name="fingerprint_gestures_summary">Use fingerprint gestures</string>
+    <string name="fingerprint_gestures_manage_summary">Arrange fingerprint gestures</string>
+    <string name="fingerprint_actions_screenon">Gestures with screen on</string>
+    <string name="tap_title">Single tap</string>
+    <string name="tap_dlg_title">Select action for single tap</string>
+    <string name="double_tap_title">Double tap</string>
+    <string name="double_tap_dlg_title">Select action for double tap</string>
+    <string name="long_tap_title">Long tap</string>
+    <string name="long_tap_dlg_title">Select action for long tap</string>
+    <string name="touchscreen_swipe_left_title">Swipe left</string>
+    <string name="swipe_left_dlg_title">Select action for swipe left</string>
+    <string name="touchscreen_swipe_right_title">Swipe right</string>
+    <string name="swipe_right_dlg_title">Select action for swipe right</string>
+
+    <!-- Fingerprint gestures screen off -->
+    <string name="fingerprint_gestures_screenoff_title">Gestures when screen off</string>
+    <string name="fingerprint_gestures_screenoff_summary">Works only when fingerprint unlock is disabled</string>
+    <string name="fingerprint_actions_screenoff">Gestures with screen off</string>
+
+   <!-- Haptic feedback -->
+   <string name="touchscreen_gesture_haptic_feedback">Haptic feedback</string>
+   <string name="touchscreen_gesture_haptic_feedback_summary">Vibrate when gesture is detected</string>
+</resources>
