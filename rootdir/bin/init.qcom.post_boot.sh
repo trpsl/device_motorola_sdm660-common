@@ -2819,6 +2819,22 @@ case "$target" in
         esac
 	# Log kernel wake-up source
 	echo 1 > /sys/module/msm_show_resume_irq/parameters/debug_mask
+
+    # Setup permissions for homebutton
+    chown -h system /sys/homebutton/enable
+    chown -h system /sys/homebutton/enable_off
+    chown -h system /sys/homebutton/haptic
+    chown -h system /sys/homebutton/haptic_off
+    chown -h system /sys/homebutton/key
+    chown -h system /sys/homebutton/key_hold
+    chown -h system /sys/homebutton/key_dbltap
+    chown -h system /sys/homebutton/key_left
+    chown -h system /sys/homebutton/key_right
+    chown -h system /sys/homebutton/key_screenoff
+    chown -h system /sys/homebutton/key_screenoff_hold
+    chown -h system /sys/homebutton/key_screenoff_dbltap
+    chown -h system /sys/homebutton/key_screenoff_left
+    chown -h system /sys/homebutton/key_screenoff_right
     ;;
 esac
 
