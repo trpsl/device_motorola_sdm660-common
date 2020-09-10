@@ -169,6 +169,12 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0-java
 
+# Homebutton
+ifneq ($(filter evert payton, $(TARGET_DEVICE)),)
+PRODUCT_PACKAGES += \
+    Homebutton
+endif
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
