@@ -29,4 +29,13 @@
         <item>org.lineageos.settings.homebutton.KeyHandler</item>
     </string-array>
 
+    <!-- Whether device supports gestures on fingerprint sensor -->
+    <bool name="config_supportsGesturesOnFingerprintSensor">true</bool>
+
+    <!-- Whether device can force navbar disabling -->
+    <bool name="config_canForceDisableNavigationBar">true</bool>
+
+    <!-- Button backlight -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+
 </resources>
