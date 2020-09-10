@@ -35,6 +35,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+ifneq ($(filter evert payton, $(TARGET_DEVICE)),)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-sdm630
+endif
 
 # Audio
 PRODUCT_PACKAGES += \
